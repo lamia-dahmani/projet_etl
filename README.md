@@ -3,6 +3,6 @@ Ce projet consiste à la création d'un ETL, pn se bassant sur une architecture 
 <br/>
 ![<archi>](https://github.com/lamia-dahmani/projet_etl/blob/master/archi_classique.png)
   
->les packages actuelles est une prise en main de SSIS
+>Projet en cours de création , les packages actuelles est une prise en main de SSIS
   
  
