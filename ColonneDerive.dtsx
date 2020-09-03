@@ -1,0 +1,935 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/2/2020 4:02:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-7AI3515N"
+  DTS:CreatorName="LAPTOP-7AI3515N\Lamia"
+  DTS:DTSID="{CFB389FF-EE6D-411D-BF3B-7957CD6CB1BA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{6231DF8E-CAF8-4C30-8271-59575728DEBD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{27599808-05E8-4C18-8CFA-174705D3625B}"
+      DTS:ObjectName="LAPTOP-7AI3515N\VERSIONDEV.FACT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-7AI3515N\VERSIONDEV;Initial Catalog=FACT;Integrated Security=True;Application Name=SSIS-Package1-{27599808-05E8-4C18-8CFA-174705D3625B}LAPTOP-7AI3515N\VERSIONDEV.FACT;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tâche de flux de données"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{E4F802AD-CB95-450A-9408-0B145E1694B4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche de flux de données"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tâche de flux de données\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[NOM]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="NOM"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NOM]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[PRENOM]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="PRENOM"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[PRENOM]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[DATE_NAISSANCE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_NAISSANCE"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_NAISSANCE]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[DATE_EMBAUCHE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_EMBAUCHE"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_EMBAUCHE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[NOM_PRENOM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="70"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[NOM_PRENOM]"
+                      name="NOM_PRENOM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NOM]} + #{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[PRENOM]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">NOM + PRENOM</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="81"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NOM]} + "." + #{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[PRENOM]} + "@gmail.com"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">NOM + "." + PRENOM + "@gmail.com"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[DATEDIFF]("YYYY",#{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_NAISSANCE]},[GETDATE]())</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("YYYY",DATE_NAISSANCE,GETDATE())</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Anciennete]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Anciennete]"
+                      name="Anciennete"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[DATEDIFF]("YYYY",#{Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_EMBAUCHE]},[GETDATE]())</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("YYYY",DATE_EMBAUCHE,GETDATE())</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Utilise des données issues de SQL Server, OLE DB, ODBC ou Oracle, à l'aide du fournisseur de données .NET Framework correspondant. Utilisez une instruction Transact-SQL pour définir le jeu de résultats. Par exemple, extrayez des données depuis SQL Server à partir du fournisseur de données .NET Framework pour SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Utilise des données issues de SQL Server, OLE DB, ODBC ou Oracle, à l'aide du fournisseur de données .NET Framework correspondant. Utilisez une instruction Transact-SQL pour définir le jeu de résultats. Par exemple, extrayez des données depuis SQL Server à partir du fournisseur de données .NET Framework pour SQL Server."
+              name="Connexion à la table employe de la base fact"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL utilisée par le composant pour extraire des données."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes externes qui ne sont pas des chaînes peuvent ou non être converties implicitement en chaînes dans les colonnes de sortie."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table de base de données source."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"STAGIAIRE"."EMPLOYES"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifier le mode de récupération des informations de colonne externe"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  description="Gestionnaire de connexions managées"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET]"
+                  name="Sortie de source ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NO_EMPLOYE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[NO_EMPLOYE]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      precision="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[REND_COMPTE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[REND_COMPTE]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[REND_COMPTE]"
+                      name="REND_COMPTE"
+                      precision="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NOM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[NOM]"
+                      length="40"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[NOM]"
+                      name="NOM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[PRENOM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[PRENOM]"
+                      length="30"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[PRENOM]"
+                      name="PRENOM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[FONCTION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[FONCTION]"
+                      length="30"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[FONCTION]"
+                      name="FONCTION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[TITRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[TITRE]"
+                      length="5"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[TITRE]"
+                      name="TITRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_NAISSANCE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[DATE_NAISSANCE]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_NAISSANCE]"
+                      name="DATE_NAISSANCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_EMBAUCHE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[DATE_EMBAUCHE]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[DATE_EMBAUCHE]"
+                      name="DATE_EMBAUCHE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[SALAIRE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[SALAIRE]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[SALAIRE]"
+                      name="SALAIRE"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[COMMISSION]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[COMMISSION]"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].Columns[COMMISSION]"
+                      name="COMMISSION"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[NO_EMPLOYE]"
+                      dataType="numeric"
+                      name="NO_EMPLOYE"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[REND_COMPTE]"
+                      dataType="numeric"
+                      name="REND_COMPTE"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[NOM]"
+                      dataType="wstr"
+                      length="40"
+                      name="NOM" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[PRENOM]"
+                      dataType="wstr"
+                      length="30"
+                      name="PRENOM" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[FONCTION]"
+                      dataType="wstr"
+                      length="30"
+                      name="FONCTION" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[TITRE]"
+                      dataType="wstr"
+                      length="5"
+                      name="TITRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[DATE_NAISSANCE]"
+                      dataType="dbTimeStamp"
+                      name="DATE_NAISSANCE" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[DATE_EMBAUCHE]"
+                      dataType="dbTimeStamp"
+                      name="DATE_EMBAUCHE" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[SALAIRE]"
+                      dataType="numeric"
+                      name="SALAIRE"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET].ExternalColumns[COMMISSION]"
+                      dataType="numeric"
+                      name="COMMISSION"
+                      precision="8"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[NO_EMPLOYE]"
+                      dataType="numeric"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      precision="6" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[REND_COMPTE]"
+                      dataType="numeric"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[REND_COMPTE]"
+                      name="REND_COMPTE"
+                      precision="6" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[NOM]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[NOM]"
+                      name="NOM" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[PRENOM]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[PRENOM]"
+                      name="PRENOM" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[FONCTION]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[FONCTION]"
+                      name="FONCTION" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[TITRE]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[TITRE]"
+                      name="TITRE" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[DATE_NAISSANCE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[DATE_NAISSANCE]"
+                      name="DATE_NAISSANCE" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[DATE_EMBAUCHE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[DATE_EMBAUCHE]"
+                      name="DATE_EMBAUCHE" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[SALAIRE]"
+                      dataType="numeric"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[SALAIRE]"
+                      name="SALAIRE"
+                      precision="8"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[COMMISSION]"
+                      dataType="numeric"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[COMMISSION]"
+                      name="COMMISSION"
+                      precision="8"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie d'erreur de source ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[NOM_PRENOM]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="NOM_PRENOM"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[NOM_PRENOM]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="81"
+                      cachedName="Email"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Anciennete]"
+                      cachedDataType="i4"
+                      cachedName="Anciennete"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Anciennete]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NOM_PRENOM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="70"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NOM_PRENOM]"
+                      name="Copie de NOM_PRENOM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[NOM_PRENOM]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="81"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Email]"
+                      name="Copie de Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Email]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Age]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Age]"
+                      name="Copie de Age"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Age]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Anciennete]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Anciennete]"
+                      name="Copie de Anciennete"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Anciennete]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Destination table employes_info"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Charge des données dans une base de données compatible ADO.NET qui utilise une vue ou une table de base de données. Chargez les données dans une table nouvelle ou existante. Par exemple, utilisez un fournisseur ADO.NET pour ODBC pour charger des données dans une destination ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Charge des données dans une base de données compatible ADO.NET qui utilise une vue ou une table de base de données. Chargez les données dans une table nouvelle ou existante. Par exemple, utilisez un fournisseur ADO.NET pour ODBC pour charger des données dans une destination ODBC."
+              name="Destination table employes_info"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table de base de données de destination."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"STAGIAIRE"."EMPLOYES_INFO"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes par lot. La taille par défaut, 0, utilise la même taille que la mémoire tampon interne SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant qu'une commande n'expire. Une valeur égale à 0 indique un délai infini. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si l'interface SqlBulkCopy doit être utilisée pour améliorer les performances des opérations d'insertion en bloc. Cette interface n'est prise en charge que par certains fournisseurs."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination table employes_info.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  description="Gestionnaire de connexions managées"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].Columns[Copie de NOM_PRENOM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="70"
+                      cachedName="Copie de NOM_PRENOM"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[NOM_PRENOM]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NOM_PRENOM]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].Columns[Copie de Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="81"
+                      cachedName="Copie de Email"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[EMAIL]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Email]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].Columns[Copie de Age]"
+                      cachedDataType="numeric"
+                      cachedName="Copie de Age"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[AGE]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Age]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].Columns[Copie de Anciennete]"
+                      cachedDataType="numeric"
+                      cachedName="Copie de Anciennete"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[ENCIENTE]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de Anciennete]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[NOM_PRENOM]"
+                      dataType="wstr"
+                      length="100"
+                      name="NOM_PRENOM" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="100"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[AGE]"
+                      dataType="numeric"
+                      name="AGE"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET].ExternalColumns[ENCIENTE]"
+                      dataType="numeric"
+                      name="ENCIENTE"
+                      precision="6" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Destination table employes_info.Outputs[Sortie d'erreur de destination ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination ADO NET"
+                  synchronousInputId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination table employes_info.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination table employes_info.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination table employes_info.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+              endId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+              endId="Package\Tâche de flux de données\Destination table employes_info.Inputs[Entrée de destination ADO NET]"
+              name="Sortie de conversion de données"
+              startId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source ADO NET]"
+              endId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source ADO NET"
+              startId="Package\Tâche de flux de données\Connexion à la table employe de la base fact.Outputs[Sortie de source ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Tâche de flux de données"
+          TopLeft="232,51" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tâche de flux de données">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="298,42"
+          Id="Package\Tâche de flux de données\Connexion à la table employe de la base fact"
+          TopLeft="214,20" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Tâche de flux de données\Colonne dérivée"
+          TopLeft="284,151" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source ADO NET]"
+          TopLeft="363.25,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89"
+              Start="0,0"
+              End="0,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Tâche de flux de données\Conversion de données"
+          TopLeft="268,263" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+          TopLeft="364.5,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="277,42"
+          Id="Package\Tâche de flux de données\Destination table employes_info"
+          TopLeft="226,415" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+          TopLeft="365,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110"
+              Start="0,0"
+              End="0,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Connexion à la table employe de la base fact">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Destination table employes_info">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

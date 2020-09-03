@@ -1,0 +1,3106 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/3/2020 2:21:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-7AI3515N"
+  DTS:CreatorName="LAPTOP-7AI3515N\Lamia"
+  DTS:DTSID="{E5408F85-F22A-4540-8A27-580532983D5E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{BE7CEB2C-CA93-440E-9F58-17B77334F686}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[comm_fussionner]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FF6BFB86-22D2-4144-8D75-DED4CD7EF063}"
+      DTS:ObjectName="comm_fussionner">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Export_Import\test_foreach\table_commande_fusionnee.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_COMMANDE"
+              DTS:DTSID="{2D4FDDC6-F5B5-4C69-A0B0-67E451BD20D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CODE_CLIENT"
+              DTS:DTSID="{239B011E-AA46-4B5F-961F-12D9FF1F098B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_EMPLOYE"
+              DTS:DTSID="{7EA49A82-90E8-4A51-AD87-522997B181CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_COMMANDE"
+              DTS:DTSID="{00769789-AB8B-4D0E-A571-B924798F548F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_ENVOI"
+              DTS:DTSID="{A4A2D1CB-8CF8-4AAC-8FF7-A4B5D717500C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PORT"
+              DTS:DTSID="{702EE04B-E7FF-442D-A7B7-E3A8754FA690}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fichier_plat_comm96]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FA719178-D822-481B-A756-E5A65FF5DCD3}"
+      DTS:ObjectName="fichier_plat_comm96">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Export_Import\test_foreach\commandes_1996.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_COMMANDE"
+              DTS:DTSID="{764D2B5A-F75C-43C2-940F-2AD1FFE6C904}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CODE_CLIENT"
+              DTS:DTSID="{62BB2E5C-1E90-4248-ABA4-DC8E45572A48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_EMPLOYE"
+              DTS:DTSID="{6083B2EB-2599-40F1-A73A-35EACD64CBEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_COMMANDE"
+              DTS:DTSID="{95390F2C-C549-4EFE-96F1-2843FC8973EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_ENVOI"
+              DTS:DTSID="{76181533-4187-4465-8FCE-4855D8A035AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PORT"
+              DTS:DTSID="{3C9D6AB3-ACA3-4EB2-8620-93E1B45DC443}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fichier_plat_comm98]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B57FED13-1C90-4A8E-9B90-721F17FFC9D1}"
+      DTS:ObjectName="fichier_plat_comm98">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Export_Import\test_foreach\commandes_1998.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_COMMANDE"
+              DTS:DTSID="{1764F149-B038-49B9-AE88-A8BE982D52DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CODE_CLIENT"
+              DTS:DTSID="{0DED38B0-EA92-4BB2-B111-C5AE2737F12B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_EMPLOYE"
+              DTS:DTSID="{2F2EE029-3FD9-4606-9F2A-DEF26EE27AA7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_COMMANDE"
+              DTS:DTSID="{B50C900B-80EF-4390-9A6C-0A063377364A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_ENVOI"
+              DTS:DTSID="{2E911088-7915-4D83-99C7-029022F3A4AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PORT"
+              DTS:DTSID="{8FBAED3E-6A39-4ADF-8BA6-CC463E16CC46}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fichier_pla_commt97]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9AF12857-D5BA-43CA-A289-2944472796D4}"
+      DTS:ObjectName="fichier_pla_commt97">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Export_Import\test_foreach\commandes_1997.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_COMMANDE"
+              DTS:DTSID="{E374E34B-EB72-4553-A58C-61A5E2913F39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CODE_CLIENT"
+              DTS:DTSID="{98B4864C-22F7-480E-8842-1F8D89C635B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NO_EMPLOYE"
+              DTS:DTSID="{6CF2065C-C8FE-4570-9897-2FDDF6E31EAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_COMMANDE"
+              DTS:DTSID="{88ED7A13-C4D0-4B5B-9CAC-9F7504F1AA8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_ENVOI"
+              DTS:DTSID="{A4D48BF2-5007-4669-88DC-32083113F179}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PORT"
+              DTS:DTSID="{0DCF5543-1281-48AF-9EFD-2891652155BF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{2A85A58E-93BC-4B45-8849-5BCA04B06AFD}"
+      DTS:ObjectName="LAPTOP-7AI3515N\VERSIONDEV.FACT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-7AI3515N\VERSIONDEV;Initial Catalog=FACT;Integrated Security=True;Application Name=SSIS-Package1-{2A85A58E-93BC-4B45-8849-5BCA04B06AFD}LAPTOP-7AI3515N\VERSIONDEV.FACT;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Message OK"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Tâche de script"
+      DTS:DTSID="{C072BCAC-16D8-4E7C-AAA2-80C2ECE2E5E0}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Message OK"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_3ed342512b6a4f3f82338ac592f7f764"
+          VSTAMajorVersion="15"
+          VSTAMinorVersion="0"
+          Language="CSharp">
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Settings.get_Default():ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Sett" +
+    "ings")]
+
+namespace ST_3ed342512b6a4f3f82338ac592f7f764.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ST_3ed342512b6a4f3f82338ac592f7f764.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{940d69fc-66ad-4c40-aba9-0ce1da7c4fa0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_3ed342512b6a4f3f82338ac592f7f764</RootNamespace>
+    <AssemblyName>ST_3ed342512b6a4f3f82338ac592f7f764</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+         <Generator>ResXFileCodeGenerator</Generator>
+         <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+             <AutoGen>True</AutoGen>
+         <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+         <Generator>SettingsSingleFileGenerator</Generator>
+         <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+         <AutoGen>True</AutoGen>
+         <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+         <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask"
+                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
+                           ApplicationType="usd"
+                           Language="cs"
+                           TemplatesPath=""
+                           DebugInfoCommandLine=""
+                           DebugInfoWorkingDir=""
+                           IconImageList=""/>
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex="">
+        </Host>
+        <ProjectClient>
+            <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+#endregion
+
+namespace ST_3ed342512b6a4f3f82338ac592f7f764
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		public void Main()
+		{
+			// TODO: Add your code here
+
+			Dts.TaskResult = (int)ScriptResults.Success;
+            MessageBox.Show("OK pour la Tache 1 ");
+		}
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>ST_3ed342512b6a4f3f82338ac592f7f764</msb:CodeName>
+    <msb:DisplayName>ST_3ed342512b6a4f3f82338ac592f7f764</msb:DisplayName>
+    <msb:ProjectId>{4306C95C-8507-4A1F-B2F8-80C76744C479}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_3ed342512b6a4f3f82338ac592f7f764.csproj" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_3ed342512b6a4f3f82338ac592f7f764")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Hewlett-Packard")]
+[assembly: AssemblyProduct("ST_3ed342512b6a4f3f82338ac592f7f764")]
+[assembly: AssemblyCopyright("Copyright @ Hewlett-Packard 2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_3ed342512b6a4f3f82338ac592f7f764.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_3ed342512b6a4f3f82338ac592f7f764.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_3ed342512b6a4f3f82338ac592f7f764.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAATlUF8AAAAAAAAAAOAAIiALATAAAA4AAAAIAAAAAAAAKi0A
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANgsAABPAAAAAEAAALQEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAMA0AAAAgAAAADgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAALQEAAAAQAAAAAYAAAAQAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAFgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAM
+LQAAAAAAAEgAAAACAAUA0CAAAFALAAABAAAAAAAAACAsAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGICKBAAAAoWbxEAAApyAQAAcCgSAAAKJioeAigTAAAKKh4C
+KBQAAAoqrn4BAAAELR5yKQAAcNADAAACKBUAAApvFgAACnMXAAAKgAEAAAR+AQAABCoafgIAAAQq
+HgKAAgAABCoafgMAAAQqHgIoGAAACioucwgAAAaAAwAABCoAQlNKQgEAAQAAAAAADAAAAHY0LjAu
+MzAzMTkAAAAABQBsAAAApAMAACN+AAAQBAAAHAUAACNTdHJpbmdzAAAAACwJAACcAAAAI1VTAMgJ
+AAAQAAAAI0dVSUQAAADYCQAAeAEAACNCbG9iAAAAAAAAAAIAAAFXHaABCQMAAAD6ATMAFgAAAQAA
+AB0AAAAFAAAABgAAAAkAAAABAAAAGAAAAAIAAAAQAAAAAgAAAAMAAAAEAAAAAQAAAAQAAAABAAAA
+AQAAAAAAGgMBAAAAAAAGAN0B4QMGAGwC4QMGACkBzgMPAFUEAAAGAFYBjwMGAMABjwMGAKEBjwMG
+AFMCjwMGAP0BjwMGABYCjwMGAG0BjwMGAIgBkAIKADECyQIKAKgAyQIGAEkDQgMGAAwBzgMGAM8E
+QgMGALEDAQQGAKEDegMOANwABAMOAD0BBAMOAMQAZQMGAPEA4QMKAPICyQISAAMFnAQSAOIEnAQG
+AHMAQgMGAE8AQgMGABIFjwMAAAAAJQAAAAAAAQABAAEAEABaAwEAOQABAAEAAAAQAAgEZARFAAEA
+AwAAARAAkwRkBFkAAwAHAAMBAADBBAAAPQAEAAoAEQBOA1UAEQCYAFkAEQA/AF0ABgYuAGEAVoCx
+BGQAVoB4AGQAUCAAAAAAhgBgAwYAAQBpIAAAAACGGMEDBgABAHEgAAAAAIMYwQMGAAEAeSAAAAAA
+kwitA2gAAQClIAAAAACTCIAAbQABAKwgAAAAAJMIjAByAAEAtCAAAAAAlgjWBHgAAgC7IAAAAACG
+GMEDBgACAMMgAAAAAJEYxwN9AAIAAAABAIoCCQDBAwEAEQDBAwYAGQDBAwoAKQDBAxAAMQDBAxAA
+OQDBAxAAQQDBAxAASQDBAxAAUQDBAxAAWQDBAxAAYQDBAxAAaQDBAwYAgQDBAwYAqQDBAxUAuQDB
+AwYAcQC5BBsAwQDvBAEAyQD+BCAAcQDBAwYAiQDBAwYA2QBhACYA2QAOBS0AkQDBAzIAsQDBAwYA
+CAAUAEsACAAYAFAAKQBzALgALgALAJAALgATAJkALgAbALgALgAjAMEALgArAOoALgAzAOoALgA7
+APAALgBDAMEALgBLAAUBLgBTAOoALgBbACsBQwBjAFAASQBzALgAYQB7AFAAYwBrAFAAAwABAAQA
+AwAAALEDgQAAAKAAhgAAANoEiwACAAQAAwACAAUABQABAAYABQACAAcABwAEgAAAAQAAAH8djmcA
+AAAAAAABAAAABAAAAAAAAAAAAAAAOQA2AAAAAAAPAAAAAAAAAAAAAABCAKoCAAAAAAQAAAAAAAAA
+AAAAADkAQgMAAAAABAAAAAAAAAAAAAAAOQCcBAAAAAAAAAAAAQAAABIEAAAFAAIAAAAAU1RfM2Vk
+MzQyNTEyYjZhNGYzZjgyMzM4YWM1OTJmN2Y3NjQAPE1vZHVsZT4AdmFsdWVfXwBtc2NvcmxpYgBk
+ZWZhdWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAVHlwZQBG
+YWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3Jp
+cHRPYmplY3RNb2RlbEJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxl
+U3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJp
+YnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJs
+eVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29y
+a0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlw
+dGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJv
+ZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0Vu
+dHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRp
+YmlsaXR5QXR0cmlidXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcATWljcm9zb2Z0
+LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlRhc2tzLlNjcmlw
+dFRhc2sAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNUXzNlZDM0MjUx
+MmI2YTRmM2Y4MjMzOGFjNTkyZjdmNzY0LmRsbABTeXN0ZW0ARW51bQByZXNvdXJjZU1hbgBTY3Jp
+cHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5S
+ZWZsZWN0aW9uAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5
+c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5S
+ZXNvdXJjZXMAU1RfM2VkMzQyNTEyYjZhNGYzZjgyMzM4YWM1OTJmN2Y3NjQuUHJvcGVydGllcy5S
+ZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUXzNlZDM0MjUxMmI2YTRmM2Y4MjMz
+OGFjNTkyZjdmNzY0LlByb3BlcnRpZXMAU2V0dGluZ3MAU3lzdGVtLldpbmRvd3MuRm9ybXMAU3Vj
+Y2VzcwBnZXRfRHRzAFNjcmlwdFJlc3VsdHMAT2JqZWN0AGdldF9EZWZhdWx0AERpYWxvZ1Jlc3Vs
+dABzZXRfVGFza1Jlc3VsdABTaG93AE1lc3NhZ2VCb3gAZ2V0X0Fzc2VtYmx5AAAAJ08ASwAgAHAA
+bwB1AHIAIABsAGEAIABUAGEAYwBoAGUAIAAxACAAAHFTAFQAXwAzAGUAZAAzADQAMgA1ADEAMgBi
+ADYAYQA0AGYAMwBmADgAMgAzADMAOABhAGMANQA5ADIAZgA3AGYANwA2ADQALgBQAHIAbwBwAGUA
+cgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAWxck+H3xzQrrAgyxOOUiwAAQgAQEIAyAA
+AQUgAQEREQQgAQEOBSABARFRBCAAEmEFAAERaQ4GAAESbRFxBCAAEnUGIAIBDhJ1CLd6XFYZNOCJ
+CImEXc2AgMyRBAAAAAAEAQAAAAMGEkkDBhJNAwYSEAIGCAMGERQEAAASSQQAABJNBQABARJNBAAA
+EhADAAABBAgAEkkECAASTQQIABIQCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhy
+b3dzAQgBAAIAAAAAACgBACNTVF8zZWQzNDI1MTJiNmE0ZjNmODIzMzhhYzU5MmY3Zjc2NAAABQEA
+AAAAFAEAD0hld2xldHQtUGFja2FyZAAAJQEAIENvcHlyaWdodCBAIEhld2xldHQtUGFja2FyZCAy
+MDIwAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlO
+YW1lEi5ORVQgRnJhbWV3b3JrIDQuNwAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNl
+cy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0
+cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVu
+dGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAAALQAAAAAAAAAAAAAaLQAAACAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAADC0AAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRs
+bAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAA
+AAAASAAAAFhAAABWBAAAAAAAAAAAAABWBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYA
+TwAAAAAAvQTv/gAAAQAAAAEAjmd/HQAAAQCOZ38dPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA
+AEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkA
+bwBuAAAAAAAAALAEtgMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAkgMAAAEAMAAw
+ADAAMAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAAEAAEAABAEMAbwBtAHAA
+YQBuAHkATgBhAG0AZQAAAAAASABlAHcAbABlAHQAdAAtAFAAYQBjAGsAYQByAGQAAABwACQAAQBG
+AGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBUAF8AMwBlAGQAMwA0ADIANQAxADIA
+YgA2AGEANABmADMAZgA4ADIAMwAzADgAYQBjADUAOQAyAGYANwBmADcANgA0AAAAPgAPAAEARgBp
+AGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADcANQA1ADEALgAyADYANQAxADAAAAAAAHAA
+KAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBUAF8AMwBlAGQAMwA0ADIANQAxADIAYgA2
+AGEANABmADMAZgA4ADIAMwAzADgAYQBjADUAOQAyAGYANwBmADcANgA0AC4AZABsAGwAAABmACEA
+AQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAAIABI
+AGUAdwBsAGUAdAB0AC0AUABhAGMAawBhAHIAZAAgADIAMAAyADAAAAAAACoAAQABAEwAZQBnAGEA
+bABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBs
+AGUAbgBhAG0AZQAAAFMAVABfADMAZQBkADMANAAyADUAMQAyAGIANgBhADQAZgAzAGYAOAAyADMA
+MwA4AGEAYwA1ADkAMgBmADcAZgA3ADYANAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABO
+AGEAbQBlAAAAAABTAFQAXwAzAGUAZAAzADQAMgA1ADEAMgBiADYAYQA0AGYAMwBmADgAMgAzADMA
+OABhAGMANQA5ADIAZgA3AGYANwA2ADQAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBv
+AG4AAAAxAC4AMAAuADcANQA1ADEALgAyADYANQAxADAAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwA
+eQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANQA1ADEALgAyADYANQAxADAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAALD0A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transferer les données fichier plat base Fact"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{B619F374-64BF-4262-879E-7BC51524B30C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transferer les données fichier plat base Fact"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Transferer les données fichier plat base Fact\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[NO_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_COMMANDE"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODE_CLIENT"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[NO_EMPLOYE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_EMPLOYE"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[DATE_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_COMMANDE"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[DATE_ENVOI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_ENVOI"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données].Columns[PORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PORT"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[PORT]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_COMMANDE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_COMMANDE]"
+                      name="Copie de NO_COMMANDE"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de CODE_CLIENT]"
+                      name="Copie de CODE_CLIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_EMPLOYE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_EMPLOYE]"
+                      name="Copie de NO_EMPLOYE"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_COMMANDE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_COMMANDE]"
+                      name="Copie de DATE_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_ENVOI]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_ENVOI]"
+                      name="Copie de DATE_ENVOI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de PORT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de PORT]"
+                      name="Copie de PORT"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[PORT]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Charge des données dans une base de données compatible ADO.NET qui utilise une vue ou une table de base de données. Chargez les données dans une table nouvelle ou existante. Par exemple, utilisez un fournisseur ADO.NET pour ODBC pour charger des données dans une destination ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Charge des données dans une base de données compatible ADO.NET qui utilise une vue ou une table de base de données. Chargez les données dans une table nouvelle ou existante. Par exemple, utilisez un fournisseur ADO.NET pour ODBC pour charger des données dans une destination ODBC."
+              name="Destination ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nom de la table de base de données de destination."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"STAGIAIRE"."COMMANDES_union"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifiez le nombre de lignes par lot. La taille par défaut, 0, utilise la même taille que la mémoire tampon interne SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant qu'une commande n'expire. Une valeur égale à 0 indique un délai infini. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si l'interface SqlBulkCopy doit être utilisée pour améliorer les performances des opérations d'insertion en bloc. Cette interface n'est prise en charge que par certains fournisseurs."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-7AI3515N\VERSIONDEV.FACT]"
+                  description="Gestionnaire de connexions managées"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de NO_COMMANDE]"
+                      cachedDataType="numeric"
+                      cachedName="Copie de NO_COMMANDE"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[NO_COMMANDE]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Copie de CODE_CLIENT"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[CODE_CLIENT]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de CODE_CLIENT]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de NO_EMPLOYE]"
+                      cachedDataType="numeric"
+                      cachedName="Copie de NO_EMPLOYE"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[NO_EMPLOYE]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de NO_EMPLOYE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de DATE_COMMANDE]"
+                      cachedDataType="date"
+                      cachedName="Copie de DATE_COMMANDE"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[DATE_COMMANDE]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de DATE_ENVOI]"
+                      cachedDataType="date"
+                      cachedName="Copie de DATE_ENVOI"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[DATE_ENVOI]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de DATE_ENVOI]" />
+                    <inputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].Columns[Copie de PORT]"
+                      cachedDataType="numeric"
+                      cachedName="Copie de PORT"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[PORT]"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copie de PORT]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[NO_COMMANDE]"
+                      dataType="numeric"
+                      name="NO_COMMANDE"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[CODE_CLIENT]"
+                      dataType="wstr"
+                      length="5"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[NO_EMPLOYE]"
+                      dataType="numeric"
+                      name="NO_EMPLOYE"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[DATE_COMMANDE]"
+                      dataType="dbTimeStamp"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[DATE_ENVOI]"
+                      dataType="dbTimeStamp"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET].ExternalColumns[PORT]"
+                      dataType="numeric"
+                      name="PORT"
+                      precision="8"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Outputs[Sortie d'erreur de destination ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination ADO NET"
+                  synchronousInputId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Outputs[Sortie d'erreur de destination ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transferer les données fichier plat base Fact\Source union commande"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source union commande"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transferer les données fichier plat base Fact\Source union commande.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[comm_fussionner]"
+                  connectionManagerRefId="Package.ConnectionManagers[comm_fussionner]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      name="NO_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      name="CODE_CLIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      name="DATE_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      name="DATE_ENVOI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      length="50"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      name="PORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_EMPLOYE" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PORT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Transferer les données fichier plat base Fact.Paths[Sortie de conversion de données]"
+              endId="Package\Transferer les données fichier plat base Fact\Destination ADO NET.Inputs[Entrée de destination ADO NET]"
+              name="Sortie de conversion de données"
+              startId="Package\Transferer les données fichier plat base Fact\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\Transferer les données fichier plat base Fact.Paths[Sortie de source de fichier plat]"
+              endId="Package\Transferer les données fichier plat base Fact\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Transferer les données fichier plat base Fact\Source union commande.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\unir les données de 3 fichiers plats"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{E89CF125-D34B-4803-935B-C9AE8CE5081F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="unir les données de 3 fichiers plats"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[comm_fussionner]"
+                  connectionManagerRefId="Package.ConnectionManagers[comm_fussionner]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[NO_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_COMMANDE"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODE_CLIENT"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]" />
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[NO_EMPLOYE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_EMPLOYE"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]" />
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[DATE_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_COMMANDE"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]" />
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[DATE_ENVOI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_ENVOI"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]" />
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[PORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PORT"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[PORT]"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_EMPLOYE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PORT" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\unir les données de 3 fichiers plats\source 1"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="source 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\unir les données de 3 fichiers plats\source 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fichier_plat_comm96]"
+                  connectionManagerRefId="Package.ConnectionManagers[fichier_plat_comm96]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      name="NO_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      name="CODE_CLIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      name="DATE_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      name="DATE_ENVOI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      name="PORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_EMPLOYE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PORT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\unir les données de 3 fichiers plats\Source 2"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source 2"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\unir les données de 3 fichiers plats\Source 2.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fichier_pla_commt97]"
+                  connectionManagerRefId="Package.ConnectionManagers[fichier_pla_commt97]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      name="NO_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      name="CODE_CLIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      name="DATE_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      name="DATE_ENVOI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      name="PORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_EMPLOYE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PORT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\unir les données de 3 fichiers plats\Source 3"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source 3"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\unir les données de 3 fichiers plats\Source 3.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fichier_plat_comm98]"
+                  connectionManagerRefId="Package.ConnectionManagers[fichier_plat_comm98]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]"
+                      name="NO_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]"
+                      name="CODE_CLIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]"
+                      name="DATE_COMMANDE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]"
+                      name="DATE_ENVOI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[PORT]"
+                      name="PORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODE_CLIENT" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NO_EMPLOYE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_COMMANDE" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATE_ENVOI" />
+                    <externalMetadataColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].ExternalColumns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PORT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\unir les données de 3 fichiers plats\Unir tout"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unir tout;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Combine des lignes de plusieurs flux de données sans effectuer de tri. Par exemple, rajoutez des lignes à un flux de données après correction des erreurs. Si le tri est important, nous recommandons l'utilisation de la transformation de fusion."
+              name="Unir tout"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1]"
+                  name="Unir tout entrée 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[NO_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODE_CLIENT"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[NO_EMPLOYE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_EMPLOYE"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[DATE_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[DATE_ENVOI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_ENVOI"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1].Columns[PORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PORT"
+                      lineageId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat].Columns[PORT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[NO_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODE_CLIENT"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[NO_EMPLOYE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_EMPLOYE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[DATE_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[DATE_ENVOI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_ENVOI"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1].Columns[PORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PORT"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat].Columns[PORT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[NO_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[CODE_CLIENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODE_CLIENT"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[CODE_CLIENT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[NO_EMPLOYE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NO_EMPLOYE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[NO_EMPLOYE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[DATE_COMMANDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_COMMANDE"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_COMMANDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[DATE_ENVOI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATE_ENVOI"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[DATE_ENVOI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2].Columns[PORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PORT"
+                      lineageId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat].Columns[PORT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrée Union All 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1]"
+                  name="Unir tout sortie 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_COMMANDE]"
+                      name="NO_COMMANDE" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[CODE_CLIENT]"
+                      name="CODE_CLIENT" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[NO_EMPLOYE]"
+                      name="NO_EMPLOYE" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_COMMANDE]"
+                      name="DATE_COMMANDE" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[DATE_ENVOI]"
+                      name="DATE_ENVOI" />
+                    <outputColumn
+                      refId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1].Columns[PORT]"
+                      name="PORT" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat]"
+              endId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Unir tout entrée 1]"
+              name="Sortie de source de fichier plat"
+              startId="Package\unir les données de 3 fichiers plats\source 1.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat1]"
+              endId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 1]"
+              name="Sortie de source de fichier plat"
+              startId="Package\unir les données de 3 fichiers plats\Source 2.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat2]"
+              endId="Package\unir les données de 3 fichiers plats\Unir tout.Inputs[Entrée Union All 2]"
+              name="Sortie de source de fichier plat"
+              startId="Package\unir les données de 3 fichiers plats\Source 3.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\unir les données de 3 fichiers plats.Paths[Unir tout sortie 1]"
+              endId="Package\unir les données de 3 fichiers plats\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+              name="Unir tout sortie 1"
+              startId="Package\unir les données de 3 fichiers plats\Unir tout.Outputs[Unir tout sortie 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{C828AD6C-F201-496C-B655-CEFF0CF8F504}"
+      DTS:From="Package\unir les données de 3 fichiers plats"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Message OK" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B1E48619-2D7D-4069-930C-7714E4E7D432}"
+      DTS:From="Package\Message OK"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\Transferer les données fichier plat base Fact" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="248,42"
+          Id="Package\unir les données de 3 fichiers plats"
+          TopLeft="245,31" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Message OK"
+          TopLeft="298,149" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="369,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="296,42"
+          Id="Package\Transferer les données fichier plat base Fact"
+          TopLeft="216,256" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="366.5,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\unir les données de 3 fichiers plats">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="121,42"
+          Id="Package\unir les données de 3 fichiers plats\source 1"
+          TopLeft="65,77" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\unir les données de 3 fichiers plats\Source 2"
+          TopLeft="241,78" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\unir les données de 3 fichiers plats\Source 3"
+          TopLeft="401,79" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\unir les données de 3 fichiers plats\Unir tout"
+          TopLeft="219,241" />
+        <EdgeLayout
+          Id="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat]"
+          TopLeft="125.5,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.75,122"
+              Start="0,0"
+              End="137.75,114.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.0699029126214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.0699029126214"
+                    Point2="0,80.0699029126214"
+                    Point3="4,80.0699029126214" />
+                  <mssgle:LineSegment
+                    End="133.75,80.0699029126214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.75,80.0699029126214"
+                    Point2="137.75,80.0699029126214"
+                    Point3="137.75,84.0699029126214" />
+                  <mssgle:LineSegment
+                    End="137.75,114.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat1]"
+          TopLeft="303,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,121"
+              Start="0,0"
+              End="0,113.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,113.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\unir les données de 3 fichiers plats.Paths[Sortie de source de fichier plat2]"
+          TopLeft="462.5,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.75,120"
+              Start="0,0"
+              End="-118.75,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.7572815533981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,74.7572815533981"
+                    Point2="0,78.7572815533981"
+                    Point3="-4,78.7572815533981" />
+                  <mssgle:LineSegment
+                    End="-114.75,78.7572815533981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.75,78.7572815533981"
+                    Point2="-118.75,78.7572815533981"
+                    Point3="-118.75,82.7572815533981" />
+                  <mssgle:LineSegment
+                    End="-118.75,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="202,42"
+          Id="Package\unir les données de 3 fichiers plats\Destination de fichier plat"
+          TopLeft="208,381" />
+        <EdgeLayout
+          Id="Package\unir les données de 3 fichiers plats.Paths[Unir tout sortie 1]"
+          TopLeft="306.25,283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,98"
+              Start="0,0"
+              End="0,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Transferer les données fichier plat base Fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Transferer les données fichier plat base Fact\Source union commande"
+          TopLeft="280,27" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Transferer les données fichier plat base Fact\Conversion de données"
+          TopLeft="283,145" />
+        <EdgeLayout
+          Id="Package\Transferer les données fichier plat base Fact.Paths[Sortie de source de fichier plat]"
+          TopLeft="380.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Transferer les données fichier plat base Fact\Destination ADO NET"
+          TopLeft="282,317" />
+        <EdgeLayout
+          Id="Package\Transferer les données fichier plat base Fact.Paths[Sortie de conversion de données]"
+          TopLeft="377.75,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,130"
+              Start="0,0"
+              End="0,122.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,122.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transferer les données fichier plat base Fact\Destination ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
